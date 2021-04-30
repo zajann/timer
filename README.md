@@ -44,6 +44,13 @@ $ go test -bench=. -benchmem
 ```
 
 ```
-BenchmarkTimer-8        	511586547	       2.32 ns/op	       0 B/op	       0 allocs/op
-BenchmarkOriginTime-8   	 8739404	       134 ns/op	       0 B/op	       0 allocs/op
+goos: linux
+goarch: amd64
+pkg: github.com/zajann/timer
+BenchmarkGetFormatStringWithTimer-16             2350820               463 ns/op              32 B/op          1 allocs/op
+BenchmarkGetFormatStringWithoutTimer-16          1804837               643 ns/op              32 B/op          1 allocs/op
+BenchmarkGetMonthStringWithTimer-16             395061864                3.08 ns/op            0 B/op          0 allocs/op
+BenchmarkGetMonthStringWithoutTimer-16          12656670                88.1 ns/op             0 B/op          0 allocs/op
+PASS
+ok      github.com/zajann/timer 6.956s
 ```
